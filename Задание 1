@@ -1,8 +1,15 @@
 TIME = 120
 WEIGTH = 80
-HEIGTH = 183
+HEIGTH = 1.83
 STEPS = 8000
 LENGTH = HEIGTH/(4+0.37)
-SPEED = LENGTH*STEPS/TIME
+DISTANCE = LENGTH*STEPS/1000
+SPEED = DISTANCE/TIME
 ENERGY = 0.035*WEIGTH+(SPEED**2/HEIGTH)*0.029*WEIGTH
-print(ENERGY)
+if DISTANCE < 2 :
+    print("Можешь лучше!!!")
+elif DISTANCE < 4 :
+    print("Очень хорошо!!!")
+elif DISTANCE > 4 :
+    print("БОГОПОДОБНО!!!")
+print( 'Пройденная дистанция : %.3f' % DISTANCE, 'Ccal : %.3f' % ENERGY)
